@@ -1,0 +1,220 @@
+/* ─── Fonts ──────────────────────────────────────────────────────────────────*/
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&display=swap');
+
+/* ─── Base ───────────────────────────────────────────────────────────────────*/
+:root {
+  --bg-deep:      #081f37;
+  --bg-panel:     #2e79ba;
+  --bg-stats:     #1e549f;
+  --accent-blue:  #042AFF;
+  --accent-green: #28a745;
+  --accent-yellow:#ffc107;
+  --border-light: #dee2e6;
+  --text-white:   #ffffff;
+}
+
+body {
+  font-family: 'Archivo', sans-serif;
+  background-color: var(--bg-deep);
+}
+
+/* ─── Typography ─────────────────────────────────────────────────────────────*/
+.main-title {
+  color: #111F68;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: var(--accent-blue);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* ─── Panels ─────────────────────────────────────────────────────────────────*/
+.video-container,
+.control-panel {
+  background: var(--bg-panel);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.stats-box {
+  background: linear-gradient(135deg, var(--bg-stats) 0%, var(--bg-stats) 100%);
+  color: var(--text-white);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* ─── Metrics ────────────────────────────────────────────────────────────────*/
+.metric {
+  text-align: center;
+  padding: 15px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.metric-value {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.metric-label {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* ─── Video ──────────────────────────────────────────────────────────────────*/
+#videoFeed {
+  width: 1020px;
+  height: 600px;
+  border-radius: 8px;
+  object-fit: contain;
+  background: #000;
+}
+
+#drawingCanvas {
+  width: 1020px;
+  height: 600px;
+  cursor: crosshair;
+  border: 3px solid #667eea;
+  background: #000;
+}
+
+/* ─── Navigation ─────────────────────────────────────────────────────────────*/
+.nav-tabs .nav-link {
+  color: #667eea;
+  font-weight: 500;
+}
+
+.nav-tabs .nav-link.active {
+  background: linear-gradient(135deg, var(--bg-stats) 0%, var(--bg-stats) 100%);
+  color: var(--text-white);
+  border: none;
+}
+
+/* ─── Dashboard ──────────────────────────────────────────────────────────────*/
+.chart-container {
+  background: var(--bg-panel);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.metric-card {
+  background: var(--bg-panel);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.dashboard-metric-value {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--text-white);
+}
+
+.refresh-indicator {
+  color: var(--accent-green);
+  font-size: 12px;
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+/* ─── Drawing Region ─────────────────────────────────────────────────────────*/
+.drawing-instructions {
+  background: #fff3cd;
+  border: 1px solid var(--accent-yellow);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.point-list {
+  max-height: 150px;
+  overflow-y: auto;
+  border: 1px solid var(--border-light);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 12px;
+}
+
+/* ─── Mode badges ────────────────────────────────────────────────────────────*/
+.mode-badge {
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.mode-detection { background: var(--accent-green); color: white; }
+.mode-counting  { background: var(--accent-yellow); color: #000; }
+
+/* ─── Table ──────────────────────────────────────────────────────────────────*/
+.table-striped {
+  background: var(--bg-panel);
+}
+
+/* ─── RTSP Camera panel ──────────────────────────────────────────────────────*/ 
+.rtsp-form input, .rtsp-form .input-group {   font-size: 18px; }  
+.rtsp-camera-item {   
+    display: flex;   
+    align-items: center;   
+    gap: 6px;   
+    padding: 6px 8px;   
+    border-radius: 6px;   
+    border: 1px solid rgba(255,255,255,0.15);   
+    margin-bottom: 4px;   
+    background: rgba(0,0,0,0.2);   
+    cursor: pointer;   
+    transition: background 0.15s;   
+    font-size: 12px;   
+    color: #fff; }  
+.rtsp-camera-item:hover {   
+    background: rgba(255,255,255,0.1); }  
+.rtsp-camera-item.active {   
+    border-color: #28a745;   
+    background: rgba(40,167,69,0.2); }  
+.rtsp-camera-item .cam-name {   
+    flex: 1;   
+    font-weight: 500;   
+    white-space: nowrap;   
+    overflow: hidden;   
+    text-overflow: ellipsis; }  
+.rtsp-camera-item .cam-url {   
+    opacity: 0.55;   
+    font-size: 10px;   
+    white-space: nowrap;   
+    overflow: hidden;   
+    text-overflow: ellipsis;   
+    max-width: 90px; }  
+.rtsp-camera-item .cam-delete {   
+    background: none;   
+    border: none;   
+    color: rgba(255,100,100,0.7);   
+    padding: 0 2px;   
+    cursor: pointer;   
+    font-size: 13px;   
+    line-height: 1;   
+    flex-shrink: 0; } 
+.rtsp-camera-item .cam-delete:hover {   
+    color: #ff4444; }  
+.rtsp-status-ok   { 
+    color: #5bdb8a; }
+.rtsp-status-err  { color: #ff6b6b; } 
+.rtsp-status-info { color: #74b9ff; }
+#rtspPass {
+    font-size: 18px;
+}

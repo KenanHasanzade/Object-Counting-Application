@@ -1,0 +1,5 @@
+Flask
+opencv-python
+ultralytics
+shapely
+Werkzeug
